@@ -105,6 +105,13 @@
 // // ]
 
 import 'package:flutter/material.dart';
+import 'package:flutter_your_name/i_widgets/_my_scaffold.dart';
+import 'package:flutter_your_name/i_widgets/my_align.dart';
+import 'package:flutter_your_name/i_widgets/my_column.dart';
+import 'package:flutter_your_name/i_widgets/my_constrained_box.dart';
+import 'package:flutter_your_name/i_widgets/my_container.dart';
+import 'package:flutter_your_name/i_widgets/my_padding.dart';
+import 'package:flutter_your_name/i_widgets/my_center.dart';
 
 void main() {
   runApp(const MyApp());
@@ -116,13 +123,27 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Scaffold(
-        body: Icon(
-          Icons.access_time_outlined,
-          size: 200,
-        ),
-      ),
+      home: myColumn(),
+    );
+
+    return const MaterialApp(
+      home: myContainer(),
+    );
+
+    return const MaterialApp(
+      home: myCenter(),
+    );
+
+    return const MaterialApp(
+      home: myAlign(),
+    );
+
+    return const MaterialApp(
+      home: myScaffold(),
+    );
+
+    return const MaterialApp(
+      home: myScaffold(),
     );
   }
 }
-
