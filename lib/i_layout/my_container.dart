@@ -10,8 +10,8 @@ class myContainer extends StatelessWidget {
         backgroundColor: Colors.grey,
         body: Container(
           color: Colors.green,
-          // width: 300,
-          // height: 500,
+          width: 300,
+          height: 500,
 
           alignment: Alignment.center,
           padding: const EdgeInsets.only(left: 100, top: 200),

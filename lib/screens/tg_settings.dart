@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class TelegramSettings extends StatelessWidget {
@@ -10,7 +9,7 @@ class TelegramSettings extends StatelessWidget {
       appBar: AppBar(title: const Text('Telegram settings screen')),
       backgroundColor: const Color(0xFFF1F0F6),
       // backgroundColor: Colors.grey.shade200,
-      body: Container(
+      body: SizedBox(
         width: double.infinity,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
