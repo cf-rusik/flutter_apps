@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_your_name/screens/tg_settings.dart';
 import 'i_layout/_my_scaffold.dart';
 import 'i_layout/my_align.dart';
 import 'i_layout/my_column.dart';
@@ -16,6 +17,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return const MaterialApp(
+      home: TelegramSettings(),
+    );
+
     return const MaterialApp(
       home: myColumn(),
     );
