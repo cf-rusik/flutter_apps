@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_your_name/screens/telegram_set.dart';
 import 'screens/tg_settings.dart';
 
 void main() {
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: TelegramSettings(), // подключаем свои виджеты к home
+      home: TelegramSettings2(), // подключаем свои виджеты к home
     );
 
   }
