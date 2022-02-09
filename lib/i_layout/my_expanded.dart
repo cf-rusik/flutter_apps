@@ -5,6 +5,13 @@ class myExpanded extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    // Основа SafeArea.
+    // Внутри SafeArea находится Scaffold.
+    // Scaffold body находится Container.
+    // Внутри Container находится Row.
+    // Внутри Row находятся 3 виджета Expanded.
+    // В каждом Expanded по цветному виджету Container
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.grey,

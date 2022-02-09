@@ -5,6 +5,11 @@ class myRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    // Основа SafeArea.
+    // Внутри SafeArea находится Scaffold.
+    // Scaffold body находится Container.
+    // Внутри Container находится Row...
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.grey,

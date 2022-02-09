@@ -5,6 +5,10 @@ class myAlign extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    // Основа SafeArea.
+    // Внутри SafeArea находится Scaffold.
+    // Scaffold body находится Align...
     return const SafeArea(
       child: Scaffold(
         backgroundColor: Colors.grey,
