@@ -26,7 +26,7 @@ class TelegramSettings extends StatelessWidget {
     const Text('Devices', style: TextStyle(fontSize: 25)),
   ];
 
-  // процесс обработки информации с сервера и получения списка объектов MyRowData
+  // вместо процесса обработки информации с сервера и получения списка объектов MyRowData
   List<MyRowData> rowData = [
     MyRowData(icon: Icons.bookmark, color: Colors.blue, text: 'Saved messages'),
     MyRowData(icon: Icons.call, color: Colors.green, text: 'Recent calls'),
