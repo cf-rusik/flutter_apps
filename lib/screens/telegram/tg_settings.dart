@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_your_name/screens/telegram/widgets/my_row_data.dart';
-import 'package:flutter_your_name/screens/telegram/widgets/my_row_widget.dart';
+import 'package:flutter_your_name/screens/telegram/widgets/my_row_panel.dart';
 
 class TelegramSettings extends StatelessWidget {
   TelegramSettings({Key? key}) : super(key: key);
@@ -18,38 +17,15 @@ class TelegramSettings extends StatelessWidget {
     );
   }
 
-  List<Widget> rowPanelText = [
-    const Text('Saved messages', style: TextStyle(fontSize: 25)),
-    const Divider(thickness: 1),
-    const Text('Recent calls', style: TextStyle(fontSize: 25)),
-    const Divider(thickness: 1),
-    const Text('Devices', style: TextStyle(fontSize: 25)),
-  ];
-
-  // вместо процесса обработки информации с сервера и получения списка объектов MyRowData
-  List<MyRowData> rowData = [
-    MyRowData(icon: Icons.bookmark, color: Colors.blue, text: 'Saved messages'),
-    MyRowData(icon: Icons.call, color: Colors.green, text: 'Recent calls'),
-    MyRowData(icon: Icons.devices, color: Colors.orange, text: 'Devices'),
-  ];
-
-  // List<Widget> rowPanelWidgets = [
-  //   MyRowWidget(
-  //       icon: Icons.bookmark, color: Colors.blue, text: 'Saved messages'),
-  //   const Divider(thickness: 1),
-  //   MyRowWidget(icon: Icons.call, color: Colors.green, text: 'Recent calls'),
-  //   const Divider(thickness: 1),
-  //   MyRowWidget(icon: Icons.devices, color: Colors.orange, text: 'Devices'),
-  // ];
-
   @override
   Widget build(BuildContext context) {
-
-    List<Widget> rowPanelWidgets = [];
-    for(var element in rowData){
-      rowPanelWidgets.add(MyRowWidget(rowData: element));
-      rowPanelWidgets.add(const Divider(thickness: 1));
-    }
+    List<Widget> rowPanel = [
+      myRow(icon: Icons.bookmark, color: Colors.blue, text: 'Saved messages'),
+      const Divider(thickness: 1),
+      myRow(icon: Icons.call, color: Colors.green, text: 'Recent calls'),
+      const Divider(thickness: 1),
+      myRow(icon: Icons.devices, color: Colors.orange, text: 'Devices'),
+    ];
 
     return Scaffold(
       appBar: AppBar(
@@ -67,9 +43,8 @@ class TelegramSettings extends StatelessWidget {
             Container(
               color: Colors.white,
               padding: const EdgeInsets.symmetric(horizontal: 15),
-              child: Column(
-                children: rowPanelWidgets,
-              ),
+              // child: Column(children: rowPanel),
+              child: MyRowPanel(),
             )
           ],
         ),
