@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_your_name/screens/telegram/widgets/my_row_panel.dart';
 
 class TelegramSettings extends StatelessWidget {
   TelegramSettings({Key? key}) : super(key: key);
@@ -19,13 +18,6 @@ class TelegramSettings extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<Widget> rowPanel = [
-      myRow(icon: Icons.bookmark, color: Colors.blue, text: 'Saved messages'),
-      const Divider(thickness: 1),
-      myRow(icon: Icons.call, color: Colors.green, text: 'Recent calls'),
-      const Divider(thickness: 1),
-      myRow(icon: Icons.devices, color: Colors.orange, text: 'Devices'),
-    ];
 
     return Scaffold(
       appBar: AppBar(
@@ -43,8 +35,13 @@ class TelegramSettings extends StatelessWidget {
             Container(
               color: Colors.white,
               padding: const EdgeInsets.symmetric(horizontal: 15),
-              // child: Column(children: rowPanel),
-              child: MyRowPanel(),
+              child: Column(children: [
+                  myRow(icon: Icons.bookmark, color: Colors.blue, text: 'Saved messages'),
+              const Divider(thickness: 1),
+              myRow(icon: Icons.call, color: Colors.green, text: 'Recent calls'),
+              const Divider(thickness: 1),
+              myRow(icon: Icons.devices, color: Colors.orange, text: 'Devices'),
+              ],),
             )
           ],
         ),

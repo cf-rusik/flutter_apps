@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_your_name/screens/telegram/tg_settings_les47.dart';
-import 'screens/telegram/tg_settings.dart';
+
+import 'package:flutter_your_name/screens/settings.dart';
 
 void main() {
   runApp(const MyApp());
