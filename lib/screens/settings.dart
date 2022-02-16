@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class TelegramSettings extends StatelessWidget {
-  TelegramSettings({Key? key}) : super(key: key);
+  const TelegramSettings({Key? key}) : super(key: key);
 
   Widget myRow(
       {required IconData icon, required Color color, required String text}) {
