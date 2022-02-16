@@ -19,6 +19,14 @@ class TelegramSettings extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
+    List<Widget> rowPanel = [
+      myRow(icon: Icons.bookmark, color: Colors.blue, text: 'Saved messages'),
+      const Divider(thickness: 1),
+      myRow(icon: Icons.call, color: Colors.green, text: 'Recent calls'),
+      const Divider(thickness: 1),
+      myRow(icon: Icons.devices, color: Colors.orange, text: 'Devices'),
+    ];
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Telegram settings screen'),
@@ -35,13 +43,7 @@ class TelegramSettings extends StatelessWidget {
             Container(
               color: Colors.white,
               padding: const EdgeInsets.symmetric(horizontal: 15),
-              child: Column(children: [
-                  myRow(icon: Icons.bookmark, color: Colors.blue, text: 'Saved messages'),
-              const Divider(thickness: 1),
-              myRow(icon: Icons.call, color: Colors.green, text: 'Recent calls'),
-              const Divider(thickness: 1),
-              myRow(icon: Icons.devices, color: Colors.orange, text: 'Devices'),
-              ],),
+              child: Column(children: rowPanel,),
             )
           ],
         ),
