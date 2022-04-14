@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_your_name/screens/les67/singChildScroll.dart';
+//import 'package:flutter_your_name/screens/les67/singChildScroll.dart';
 import 'package:flutter_your_name/screens/les68_recent_calls/call_info.dart';
-import 'package:flutter_your_name/screens/les68_recent_calls/recent_calls_screen.dart';
+//import 'package:flutter_your_name/screens/les68_recent_calls/recent_calls_screen.dart';
 import 'package:flutter_your_name/screens/les73/les73.dart';
 import 'package:flutter_your_name/screens/les73/les73_gesture_detector.dart';
 
@@ -33,3 +33,5 @@ class MyApp extends StatelessWidget {
         });
   }
 }
+
+
