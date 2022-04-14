@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-//import 'package:flutter_your_name/screens/les67/singChildScroll.dart';
-import 'package:flutter_your_name/screens/les68_recent_calls/call_info.dart';
-//import 'package:flutter_your_name/screens/les68_recent_calls/recent_calls_screen.dart';
-import 'package:flutter_your_name/screens/les73/les73.dart';
-import 'package:flutter_your_name/screens/les73/les73_gesture_detector.dart';
+import 'package:flutter_your_name/screens/les74/les74_inkwell.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,24 +10,20 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // return const MaterialApp(
-    //   home: Scaffold(
-    //     body: RecentCalls(),
-    //   ), // подключаем свои виджеты к home
-    // );
     return MaterialApp(
-        title: 'Named Routes Demo',
-        // Start the app with the "/" named route. In this case, the app starts
-        // on the FirstScreen widget.
-        initialRoute: '/myGestsure',
-        routes: {
-          // When navigating to the "/" route, build the FirstScreen widget.
-          '/': (context) => const Lamp(),
-          // When navigating to the "/second" route, build the SecondScreen widget.
-          '/second': (context) => const CallInfo(),
-          '/myGestsure': (context) => const myGestureDetector(),
-        });
+
+      // В routes прописываются маршруты к виджетам
+      routes: {
+        // Путь к корневому виджету
+        '/': (context) => const myInkWell(),
+
+        // Путь к любому другому виджету
+        // '/название': (context) => const myInkWell(),
+      },
+
+
+      // initialRoute запускает виджет, который указан после :
+      initialRoute: '/',
+    );
   }
 }
-
-
